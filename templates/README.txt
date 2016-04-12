@@ -1,0 +1,1 @@
+Templates directory holds the HTML templates, Jinja format, used by the Flask framework.

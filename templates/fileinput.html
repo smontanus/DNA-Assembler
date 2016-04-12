@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="block">
+    <div style="width:50%;float:left;">
+        <form method="post" enctype=multipart/form-data action="{{ url_for('fileinput') }}" >
+            </br>
+            <h3>FASTQ File to Process</h3>
+            <p>{{ form.fqfile(class="fastq") }}</p>
+            <p>{{ form.submitButton }}</p>
+        </form>
+    </div>
+    <div style="width:50%;float:right;">
+        <img src="{{ url_for('static', filename='./images/step1.jpg') }}">
+    </div>
+    <p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class=flashes style="clear:both;">
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </p>
+</div>
+{% endblock %}

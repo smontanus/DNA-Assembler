@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+    <head>
+        {% if title %}
+            <title>{{title}}</title>
+        {% else %}
+            <title>DNA Assembly</title>
+        {% endif %}
+        {{ JSGlue.include() }}
+        <link rel="icon" type="image/ico" href="{{ url_for('static', filename='./images/favicon.ico') }}">
+        <link href='https://fonts.googleapis.com/css?family=Michroma|Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/dna_assembly.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='./js/jquery-1.11.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='./js/dnaassembler.js') }}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo"><img src="{{ url_for('static', filename='./images/logo.jpg') }}" width="100"></div>
+                <div class="header_text"><h1>DNA Assembly</h1></div>
+                <div class="help">
+                    <a href="https://sites.google.com/a/brandeis.edu/dna-assembly-help/home/sample-data" target="_blank">
+                        <img  title="Sample Data" src="{{ url_for('static', filename='./images/sample.png') }}">
+                    </a>
+                    <a href="https://sites.google.com/a/brandeis.edu/dna-assembly-help/application-help" target="_blank">
+                        <img  title="Help" src="{{ url_for('static', filename='./images/help.png') }}">
+                    </a>
+                </div>
+            </div>
+            <div class="loading">
+                <img src="{{ url_for('static', filename='./images/ajax-loader.gif') }}" width="128" style="display:block;margin-left:auto;margin-right:auto;">
+                <p>Your FASTQ file has been assembled into a single sequence and is now being analyzed
+                by the BLAST web service to determine the species. This process can take several minutes.
+                Please be patient.</p>
+                <button onclick="window.location.href='{{ url_for('index') }}'" style="display:block;margin-left:auto;margin-right:auto;">Cancel</button></p>
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

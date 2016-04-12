@@ -1,0 +1,1 @@
+Static directory holds the static files used by the Flask framework, including images, css, and javascript.

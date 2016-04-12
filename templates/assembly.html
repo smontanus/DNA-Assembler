@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="block">
+    <div style="width:50%;float:left;">
+        <h3>Assembly Completed</h3>
+        <span class="title">Source FASTQ File:</span> {{file}}</br></br>
+        <span class="title">Assembled FASTA File:</span> <a href="{{ url_for('download_file', filename=dfile) }}">{{dfile}}</a></br></br>
+    </div>
+    <div style="width:50%;float:right;">
+        <img src="{{ url_for('static', filename='./images/step3.jpg') }}">
+    </div>
+    <span class="title">Analysis has determined your sequence is from the following species:</span>
+    </br></br><span class="blast">{{species}}</span></br></br>
+    <span class="texttitle">Assembled DNA Sequence</span>
+    <p><textarea rows="8" cols="110" name="seq" wrap="hard" readonly>{{seq}}</textarea></p>
+    <span class="texttitle">BLAST Sequence Alignment Results</span>
+    <p><textarea rows="8" cols="110" name="seq" wrap="hard" readonly>{{blast_r}}</textarea></p>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Home</button>
+</div>
+{% endblock %}

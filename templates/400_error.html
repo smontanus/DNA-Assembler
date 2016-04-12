@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="errors">
+    <center><h3>400 Error!</h3>
+    <p>The server responded with page not found.</p>
+    <input id="backbutton" type="button" onClick="window.location.href='{{ url_for('index') }}'" value="Home"></center>
+</div>
+{% endblock %}

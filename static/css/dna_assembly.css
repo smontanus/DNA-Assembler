@@ -1,0 +1,183 @@
+/*Styles for DNA Assembly Application*/
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  padding-left: 5px; 
+}
+
+h1 {
+  color: #ff9c00;
+  font-family: 'Michroma', sans-serif;
+  font-size: 25px;
+}
+
+h2 {
+  color: #5141df;
+  font-family: 'Michroma', sans-serif;
+  font-size: 22px;
+}
+
+h3 {
+  color: #5141df;
+  font-family: 'Michroma', sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: #5141df;
+  font-size: 12px;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+p {
+  color: black;
+  font-size: 12px;
+}
+
+span.title {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+span.texttitle {
+  color: #ff9c00;
+  font-family: 'Michroma', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+span.blast {
+  background-color: #ddd9ff;
+  border: 1px solid #5141df;
+  clear: both;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+div.container {
+  border: 1px solid #ff9c00;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 793px;
+  overflow: hidden;
+}
+
+div.header {
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px;
+  width: 773px;
+}
+
+div.logo {
+  float: left;
+  height: 100px;
+  padding: 1px;
+  width: 100px;
+}
+
+div.header_text {
+  float: left;
+  height: 100px;
+  padding: 1px;
+  width: 450px;
+}
+
+div.block {
+  height: auto;
+  padding: 1px;
+  width: 793px;
+}
+
+button {
+  background-color: #5141df;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+input {
+  background-color: #5141df;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+input.fastq {
+  background-color: #ff9c00;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+textarea {
+  background-color: #ddd9ff;
+  border: 1px solid #5141df;
+  outline: none;
+  resize: none;
+}
+
+div.error {
+  background-color: #ffe8e8;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  color: #ff0000;
+  padding: 5px;
+}
+
+div.help {
+  float: right;
+  top: -100px;
+}
+
+td.helpertext {
+  background-color: #ffd188;
+  padding-left: 10px;
+  width: 700px;
+}
+
+div.blastwarning {
+  background-color: #ffe8e8;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  color: #ff0000;
+  padding: 5px;
+}
+
+div.loading {
+  border: 1px solid #ff9c00;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px 5px 10px;
+  width: 250px;
+  display: none;
+  cursor: wait;
+}

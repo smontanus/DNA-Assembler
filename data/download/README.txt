@@ -1,0 +1,1 @@
+Directory for storing created FASTA files for downloading

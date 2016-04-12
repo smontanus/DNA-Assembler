@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="block">
+    <div style="width:50%;float:left;">
+        <h3>FASTQ Analysis Results:</h3>
+        <span class="title">FASTQ File:</span> {{file}}</br></br>
+        <span class="title">Number of Reads:</span> {{num}}</br></br>
+        <span class="title">Average Read Length:</span> {{alen}}</br></br>
+        <span class="texttitle">FASTQ File Data</span>
+    </div>
+    <div style="width:50%;float:right;">
+        <img src="{{ url_for('static', filename='./images/step2.jpg') }}">
+    </div>
+    <p><textarea rows="10" cols="110" name="data" wrap="hard" readonly>{{data}}</textarea></p>
+    <div class="blastwarning">WARNING: Blast analysis attempts to align your assembled sequence with a known genome. This process
+    is computationaly intensive and can take several minutes to complete. Select "Assemble without Blast" if you want a quicker assembly
+    without genome analysis.</div>
+    <p><button onclick="loading('{{ url_for('assemble', fqFile=file, blast=True) }}');">Assemble with BLAST</button>
+    <button onclick="window.location.href='{{ url_for('assemble', fqFile=file, blast=False) }}'">Assemble without BLAST</button>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Cancel</button></p>
+</div>
+{% endblock %}
