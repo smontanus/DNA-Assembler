@@ -2,7 +2,7 @@ Application that accepts a FASTQ format file of DNA sequence reads and assembles
 
 To Start the Flask server:
 
-1. From a comand prompt navigate to the directory that has the file application.py
+1. From a command prompt navigate to the directory that has the file application.py
 
 2. Type the command "python application.py"
 
